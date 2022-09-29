@@ -14,5 +14,7 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
+//below is where to get any new stuff -> eventually replace the above with this
+router.get("/today", ensureAuth, postsController.getProfile);
 
 module.exports = router;
